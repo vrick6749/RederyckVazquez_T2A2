@@ -2,9 +2,20 @@
 <ul>
 <%for book in @books%>
 <li>
-   <%=link_to book.title, view_path(book.id) %>- <%= book.author.name%> <br>
-    <%= book.author.biography%>
-    <%= link_to 'edit this book', edit_path(book.id) %>
+   <b>Book Title:</b> <%= link_to book.title, view_path(book.id) %>   
+
+   <b>Book Author:</b> <%= book.author.name%> 
+   <b>Book Biography:</b> <%= book.author.biography%>
+
+   <div>
+    
+   <%= link_to 'edit this book', edit_path(book.id) %>
+   <%= link_to 'delete this book', delete_path(book.id) %>
+   </div>
+    <br>
+    <br>
+    <br>
+    <br>
 </li>
 <%end%>
 </ul>
