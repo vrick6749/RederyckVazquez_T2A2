@@ -2,7 +2,7 @@
 <ul>
 <%for book in @books%>
 <li>
-    <%= book.title%> - <%= book.author.name%> <br>
+   <%=link_to book.title, view_path(book.id) %>- <%= book.author.name%> <br>
     <%= book.author.biography%>
 </li>
 <%end%>
