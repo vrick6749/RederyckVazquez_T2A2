@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post "/books", to: "books#create"
   get "/books/new", to: "books#new", as: "create_book"
   get "/books/:id", to: "books#show", as: "view"
+  get "/books/:id/edit", to: "books#edit", as: "edit"
 
 
  

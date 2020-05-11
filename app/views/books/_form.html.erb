@@ -12,12 +12,12 @@
 
     <div>
     <%= form.label :author%>
-    <%= form.text_field :author_id%>
+    <%= form.select(:author_id, author.map{|each| [each.name, each.id]}) %>
     </div>
 
     <div>
     <%= form.label :publisher%>
-    <%= form.text_field :publisher_id%>
+    <%= form.select(:publisher_id, publisher.map{|each|[each.name, each.id]})%>
     </div>
 
     <div>

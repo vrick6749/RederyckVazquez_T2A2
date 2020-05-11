@@ -4,6 +4,7 @@
 <li>
    <%=link_to book.title, view_path(book.id) %>- <%= book.author.name%> <br>
     <%= book.author.biography%>
+    <%= link_to 'edit this book', edit_path(book.id) %>
 </li>
 <%end%>
 </ul>
