@@ -5,12 +5,12 @@
    <b>Book Title:</b> <%= link_to book.title, view_path(book.id) %>   
 
    <b>Book Author:</b> <%= book.author.name%> 
-   <b>Book Biography:</b> <%= book.author.biography%>
+   <b>Author Biography:</b> <%= book.author.biography%>
 
    <div>
     
    <%= link_to 'edit this book', edit_path(book.id) %>
-   <%= link_to 'delete this book', delete_path(book.id) %>
+   <%= link_to 'delete this book', delete_path(book.id), method:"delete" %>
    </div>
     <br>
     <br>
