@@ -1,0 +1,26 @@
+<%= form_with model: @book, local:true do |form| %>
+    <div>
+    <%= form.label :title%>
+    <%= form.text_field :title%>
+    </div>
+
+    <div>
+    <%= form.label :price%>
+    <%= form.number_field :price%>
+    </div>
+
+
+    <div>
+    <%= form.label :author%>
+    <%= form.text_field :author_id%>
+    </div>
+
+    <div>
+    <%= form.label :publisher%>
+    <%= form.text_field :publisher_id%>
+    </div>
+
+    <div>
+    <%= form.submit%>
+    </div>
+<%end%>
