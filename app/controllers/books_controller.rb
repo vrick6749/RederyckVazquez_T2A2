@@ -2,7 +2,7 @@ class BooksController < ApplicationController
 
 
     def index
-        
+
     end
 
 
@@ -51,7 +51,7 @@ class BooksController < ApplicationController
 
 
 
-    def delete
+    def destroy
 
     end
 
