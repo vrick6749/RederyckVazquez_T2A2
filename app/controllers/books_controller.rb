@@ -47,7 +47,7 @@ class BooksController < ApplicationController
     end
 
     def update
-        # Book.update()
+         Book.update(params[:id], book_params)
     end
 
 
