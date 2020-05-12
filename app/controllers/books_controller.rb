@@ -33,6 +33,7 @@ class BooksController < ApplicationController
 
 
     def edit
+        @book = Book.find(params[:id])
         @publisher = Publisher.all
         @author = Author.all
     end
@@ -47,7 +48,7 @@ class BooksController < ApplicationController
     end
 
     def update
-         Book.update(params[:id], book_params)
+         Book.update(params["id"], book_params)
     end
 
 
