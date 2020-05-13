@@ -9,6 +9,10 @@
     <%= form.number_field :price, value: book.price%>
     </div>
 
+    <% genre.all.each do |genre| %>
+        <%= check_box_tag "genre[genre_ids][]", genre.id %>
+        <%= genre.name%><br>
+    <% end %>
 
     <div>
     <%= form.label :author%>

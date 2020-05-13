@@ -11,7 +11,7 @@ class BooksController < ApplicationController
     def show
 
         @book = Book.find(params[:id])
-
+        
     end
 
 
@@ -28,6 +28,7 @@ class BooksController < ApplicationController
         @book = Book.new
         @publisher = Publisher.all
         @author = Author.all
+        @genre = Genre.all
     end
 
 
@@ -36,6 +37,7 @@ class BooksController < ApplicationController
         @book = Book.find(params[:id])
         @publisher = Publisher.all
         @author = Author.all
+        @genre = Genre.all
     end
 
 
@@ -49,6 +51,8 @@ class BooksController < ApplicationController
 
     def update
          Book.update(params["id"], book_params)
+         redirect_to intro_path
+
     end
 
 
@@ -69,7 +73,7 @@ class BooksController < ApplicationController
     private
 
     def book_params
-        params.require(:book).permit(:title, :author_id, :price, :publisher_id, :genre, :picture)
+        params.require(:book).permit(:title, :author_id, :price, :publisher_id, :picture)
     end
 
 
