@@ -12,7 +12,7 @@ class BooksController < ApplicationController
     def show
 
         @book = Book.find(params[:id])
-        
+    
     end
 
 
@@ -59,7 +59,12 @@ class BooksController < ApplicationController
     end
 
     def update
-         Book.update(params["id"], book_params)
+         book_to_edit=Book.update(params["id"], book_params)
+         book_to_edit.genres.update
+        #  for genre in params["genre"]["genre_ids"] # you can remove genre_ids  but also need to remove from form  --what does first ["genre"] mean and ["genre_ids"]
+           
+        #     book_to_edit.genres <<  Genre.find(genre)
+        # end
          redirect_to intro_path
 
     end
