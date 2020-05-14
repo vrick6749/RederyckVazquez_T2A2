@@ -4,6 +4,7 @@ class BooksController < ApplicationController
     def index
         @books = Book.all
         @author = Author.all
+        
     end
 
 
@@ -17,7 +18,7 @@ class BooksController < ApplicationController
 
 
 
-
+   # Genre.find_by_book_id(book.id)
 
 
 
@@ -45,7 +46,15 @@ class BooksController < ApplicationController
 
 
     def create
+        puts "*************************************************************"
+        puts params
+        puts "************************************************************"
         Book.create(book_params)
+        most_recent_book = Book.last
+        for genre in params["genre"]["genre_ids"] # you can remove genre_ids  but also need to remove from form
+           
+            most_recent_book.genres <<  Genre.find(genre)
+        end
         redirect_to intro_path
     end
 
@@ -73,7 +82,7 @@ class BooksController < ApplicationController
     private
 
     def book_params
-        params.require(:book).permit(:title, :author_id, :price, :publisher_id, :picture)
+        params.require(:book).permit(:title, :author_id, :price, :publisher_id,:genre_id, :picture)
     end
 
 

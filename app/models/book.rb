@@ -1,6 +1,7 @@
 class Book < ApplicationRecord
   belongs_to :author
   belongs_to :publisher
-  has_many :bookgenres
+  has_many :bookgenres, dependent: :destroy
   has_many :genres, through: :bookgenres
+  accepts_nested_attributes_for :bookgenres
 end

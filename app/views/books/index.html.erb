@@ -3,7 +3,8 @@
 <%for book in @books%>
 <li>
    <b>Book Title:</b> <%= link_to book.title, book_path(book.id) %>   
-
+      <b>Book Genre:</b> <%= Genre.find(book.genres.ids).each.name%>
+  
    <b>Book Author:</b> <%= book.author.name%> 
    <b>Author Biography:</b> <%= book.author.biography%>
 
