@@ -59,12 +59,14 @@ class BooksController < ApplicationController
     end
 
     def update
-         book_to_edit=Book.update(params["id"], book_params)
-         book_to_edit.genres.update
-        #  for genre in params["genre"]["genre_ids"] # you can remove genre_ids  but also need to remove from form  --what does first ["genre"] mean and ["genre_ids"]
-           
-        #     book_to_edit.genres <<  Genre.find(genre)
-        # end
+         book_to_edit=Book.find(params["id"])
+         book_to_edit.update(book_params)
+        #  book_to_edit.bookgenres.where(book_id: params["id"]).update(genre_id: )
+         book_to_edit.genres = params["genre"]["genre_ids"].map { |genre_id| Genre.find(genre_id) }
+         book_to_edit.save
+          print "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+
+          
          redirect_to intro_path
 
     end

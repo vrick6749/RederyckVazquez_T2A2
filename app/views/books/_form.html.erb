@@ -10,7 +10,7 @@
     </div>
 
     <% genre.all.each do |genre| %>
-        <%= check_box_tag "genre[genre_ids][]", genre.id %>
+        <%= check_box_tag "genre[genre_ids][]", genre.id, !book.genres.where(id:genre.id).empty? %>
         <%= genre.name%><br>
     <% end %>
 
