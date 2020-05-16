@@ -4,6 +4,7 @@ class BooksController < ApplicationController
     before_action :set_user_books, only: [:destroy, :edit, :update]
 
     def index
+
         @books = Book.all
         
     end
@@ -19,6 +20,7 @@ class BooksController < ApplicationController
 
 
     def new
+        
         @book = Book.new
 
     end
@@ -35,17 +37,14 @@ class BooksController < ApplicationController
 
 
     def create
-        puts "*************************************************************"
-        puts params
-        puts "************************************************************"
+
         @book = current_user.books.create(book_params)
-       
         most_recent_book = Book.last
-        for genre in params["genre"]["genre_ids"] # you can remove genre_ids  but also need to remove from form
-           
-            most_recent_book.genres <<  Genre.find(genre)
-        end
+                for genre in params["genre"]["genre_ids"] # you can remove genre_ids  but also need to remove from form
+                    most_recent_book.genres <<  Genre.find(genre)
+                end
         redirect_to intro_path
+
     end
 
     def update
@@ -53,9 +52,6 @@ class BooksController < ApplicationController
          @book.update(book_params)
          @book.genres = params["genre"]["genre_ids"].map { |genre_id| Genre.find(genre_id) }
          @book.save
-          print "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
-
-          
          redirect_to intro_path
 
     end
@@ -64,8 +60,10 @@ class BooksController < ApplicationController
 
 
     def destroy
+
         @book.destroy
         redirect_to intro_path
+
     end
 
 
