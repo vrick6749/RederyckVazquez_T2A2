@@ -44,7 +44,7 @@ class BooksController < ApplicationController
         puts "*************************************************************"
         puts params
         puts "************************************************************"
-        @book = current_user.listings.create(book_params)
+        @book = current_user.books.create(book_params)
        
         most_recent_book = Book.last
         for genre in params["genre"]["genre_ids"] # you can remove genre_ids  but also need to remove from form
