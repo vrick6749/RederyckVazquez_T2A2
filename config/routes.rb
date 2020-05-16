@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get "/", to: "pages#home", as: "root"
   get "/books", to: "books#index", as: "intro"
   post "/books", to: "books#create"
