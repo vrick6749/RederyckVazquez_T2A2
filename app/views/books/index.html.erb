@@ -12,9 +12,13 @@
    <b>Author Biography:</b> <%= book.author.biography%>
 
    <div>
-    
+   <%if current_user.id != book.id%>
+
+    <form>
    <%= link_to 'edit this book', edit_book_path(book.id) %>
    <%= link_to 'delete this book', delete_path(book.id), method:"delete" %>
+   </form>
+   <%end%>
    </div>
     <br>
     <br>
