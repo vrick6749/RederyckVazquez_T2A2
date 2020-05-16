@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-
+    before_action :authenticate_user!
 
     def index
         @books = Book.all
@@ -14,11 +14,6 @@ class BooksController < ApplicationController
         @book = Book.find(params[:id])
     
     end
-
-
-
-
-   # Genre.find_by_book_id(book.id)
 
 
 
@@ -49,7 +44,8 @@ class BooksController < ApplicationController
         puts "*************************************************************"
         puts params
         puts "************************************************************"
-        Book.create(book_params)
+        @book = current_user.listings.create(book_params)
+       
         most_recent_book = Book.last
         for genre in params["genre"]["genre_ids"] # you can remove genre_ids  but also need to remove from form
            
