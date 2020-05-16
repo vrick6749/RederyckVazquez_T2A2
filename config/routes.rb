@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  get "/", to: "pages#home", as: "root"
   get "/books", to: "books#index", as: "intro"
   post "/books", to: "books#create"
   get "/books/new", to: "books#new", as: "create_book"
