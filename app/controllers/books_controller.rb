@@ -1,9 +1,10 @@
 class BooksController < ApplicationController
     before_action :authenticate_user!
+    before_action :set_author_genre_publisher, only: [:index, :new, :edit]
+    before_action :set_user_books, only: [:destroy, :edit, :update]
 
     def index
         @books = Book.all
-        @author = Author.all
         
     end
 
@@ -17,23 +18,16 @@ class BooksController < ApplicationController
 
 
 
-
-
-
     def new
         @book = Book.new
-        @publisher = Publisher.all
-        @author = Author.all
-        @genre = Genre.all
+
     end
 
 
 
     def edit
-        @book = Book.find(params[:id])
-        @publisher = Publisher.all
-        @author = Author.all
-        @genre = Genre.all
+        
+
     end
 
 
@@ -55,11 +49,10 @@ class BooksController < ApplicationController
     end
 
     def update
-         book_to_edit=Book.find(params["id"])
-         book_to_edit.update(book_params)
-        #  book_to_edit.bookgenres.where(book_id: params["id"]).update(genre_id: )
-         book_to_edit.genres = params["genre"]["genre_ids"].map { |genre_id| Genre.find(genre_id) }
-         book_to_edit.save
+         
+         @book.update(book_params)
+         @book.genres = params["genre"]["genre_ids"].map { |genre_id| Genre.find(genre_id) }
+         @book.save
           print "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
 
           
@@ -70,13 +63,7 @@ class BooksController < ApplicationController
 
 
 
-
-
-
-
-
     def destroy
-        @book = Book.find(params[:id])
         @book.destroy
         redirect_to intro_path
     end
@@ -84,6 +71,19 @@ class BooksController < ApplicationController
 
     private
 
+    def set_author_genre_publisher
+        @publisher = Publisher.all
+        @author = Author.all
+        @genre = Genre.all
+    end
+
+    def set_user_books
+        @book = current_user.books.find_by_id(params[:id])
+        if @book == nil
+            redirect_to intro_path
+
+        end
+    end
     def book_params
         params.require(:book).permit(:title, :author_id, :price, :publisher_id,:genre_id, :picture)
     end
