@@ -39,6 +39,7 @@ class BooksController < ApplicationController
     def create
 
         @book = current_user.books.create(book_params)
+        puts @book.errors.full_messages
         most_recent_book = Book.last
                 for genre in params["genre"]["genre_ids"] # you can remove genre_ids  but also need to remove from form
                     most_recent_book.genres <<  Genre.find(genre)

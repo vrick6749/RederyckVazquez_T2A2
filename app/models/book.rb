@@ -5,4 +5,5 @@ class Book < ApplicationRecord
   has_many :bookgenres, dependent: :destroy
   has_many :genres, through: :bookgenres
   accepts_nested_attributes_for :bookgenres
+  validates :title, presence: true
 end
