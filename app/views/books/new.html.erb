@@ -1,4 +1,8 @@
 <h1> This is the new page</h1>
-
+<% if @book.errors.any?%>
+    <% @book.errors.full_messages.each do |message| %>
+    <li><%= message%></li>
+    <%end%>
+<%end%>
 <%=render "form", book: @book, author: @author, publisher: @publisher,genre: @genre %>
 <%= link_to 'Back to all books', intro_path %>
