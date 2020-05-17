@@ -7,5 +7,6 @@ class Book < ApplicationRecord
   accepts_nested_attributes_for :bookgenres
   validates :title, presence: true
   validates :price, presence: true
+  has_one_attached :picture
 
 end
