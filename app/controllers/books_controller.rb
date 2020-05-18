@@ -13,7 +13,7 @@ class BooksController < ApplicationController
 
     def show
         @book = Book.find(params[:id])
-       
+        @book.price = @book.price.to_i
             session = Stripe::Checkout::Session.create(
                 payment_method_types: ['card'],
                 customer_email: current_user.email,
