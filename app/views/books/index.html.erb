@@ -12,7 +12,7 @@
    <b>Author Biography:</b> <%= book.author.biography%>
 
    <div>
-   <%if current_user.id == book.id%>
+   <%if current_user.id == book.user.id%>
 
     <form>
    <%= link_to 'edit this book', edit_book_path(book.id) %>
@@ -21,11 +21,10 @@
    <%end%>
    </div>
     <br>
-    <br>
-    <br>
-    <br>
+
 </li>
 <%end%>
 </ul>
-
+<div class ="button">
 <%= link_to "Create a book", create_book_path%>
+</div>

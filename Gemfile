@@ -68,3 +68,5 @@ gem "devise", "~> 4.7"
 gem "aws-sdk-s3", "~> 1.64"
 
 gem "stripe", "~> 5.22"
+
+gem "bulma-rails", "~> 0.8.0"
