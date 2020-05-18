@@ -10,14 +10,20 @@
   </head>
 
   <body>
+  
     <% if user_signed_in?%>
-    <%= link_to "logout", destroy_user_session_path, method: :delete%>
+   
+    <div class ="button is-primary is-warning is-small"><%= link_to "logout", destroy_user_session_path, method: :delete%></div>
+    
     <%else%>
+    
     <div class ="button is-primary is-light is-small"><%= link_to "Sign up", new_user_registration_path%> </div>
     <div class ="button is-primary is-light is-small"><%= link_to "Login", new_user_session_path  %></div>
+   
     <%end%>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+  </div>
 
     <%= yield %>
   </body>
