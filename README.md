@@ -49,17 +49,19 @@ NB Slide/Presentation specific requirements
 ## Section 2: Documentation 
 NB leave the Titles as they are and answer the questions below.
 
-##### 1. Explain the different high-level components (abstractions) in your App.
+##### 1. Explain the different high-level components (abstractions) in your App.---------------------------------------------------------
 * Includes a complete and detailed description of third party services used in the app
+
+
+
+##### 2. List and describe any 3rd party services.
+* Precisely explains and shows understanding of the different high-level components of the app
 
 The Bookstopia app utilizes several third party services, namely Stripe, Amazon Web Services and Bulma. The creation of routes, methods, views and models are simply not sufficient to launch a scalable application, third party applications assists us in developing a more functional and scalable project. AWS serves as a data storage/ database since the Bookstopia allows for the upload of book images. Although a handful of images may not pose an issue for local databse, a scaled application will require a more robust database, as data uploads from multiple users may tally up beyond the local database capacity.
 
 Stripe is a third party application which allows a business to receive payments when a request is sent to pay for a product. The stripe application  has a boilerplate form which allows for ease of attaching required information, as to what was purchased and whom purchased it. Stripe automatically calculates any neccessary mathematical operations and deducts the designated amount of a particular product. Once the transaction is complete stripe then sends back a confirmation post to notify as to whether or not it was successful. Availing of this service carries a surcharge for every transaction conducted with stripe.
 
 Bulma is a styling application. This applicaiton is derived from the css and mainly utilizes the power of flexbox. Flexbox enables for the application to be dynamic as the objects within the page become responsive and scale according to the devise it is currently being viewed on. A key feature of Bulma are the pre-fabricated templates, which allows for convinient insertion of specific designs. This is accomplished mainly through the use of containers and classes. Although pre-made, Bulma designs can still be overwritten as per the users discretion, making designing flexible.
-
-##### 2. List and describe any 3rd party services.
-* Precisely explains and shows understanding of the different high-level components of the app
 
 ##### 3.1. Identify the problem you’re trying to solve by building this particular marketplace App?
 * Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting
