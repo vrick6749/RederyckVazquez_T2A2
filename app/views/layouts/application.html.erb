@@ -9,20 +9,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-          <% if user_signed_in?%>
-        
-            <div class ="button is-primary is-small"><%= link_to "logout", destroy_user_session_path, method: :delete%></div>
-            
-          <%else%>
-            
-            <div class ="button is-primary is-small"><%= link_to "Sign up", new_user_registration_path%> </div>
-            <div class ="button is-primary is-small"><%= link_to "Login", new_user_session_path  %></div>
-          
-          <%end%>
-      
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <body>  
+    <%= render "/layouts/navbar"%>
 
       <%= yield %>
     

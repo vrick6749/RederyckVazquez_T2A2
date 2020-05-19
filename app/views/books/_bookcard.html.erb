@@ -1,0 +1,25 @@
+            <%for book in books%>
+                <div class="box book-card">
+                        <p class="bold">Book Title:</p> 
+                            <%= link_to book.title, book_path(book.id) %>   
+                            <p class="bold">Genres:</p> 
+                            <% @genres = Genre.find(book.genres.ids)%>
+                                <%@genres.each do |genre|%>
+                                    <%=  genre.name%>
+                            <%end%>
+                        
+                        <p class="bold">Book Author:</p> <%= book.author.name%> 
+                        <p class="bold">Author Biography:</p> <%= book.author.biography%>
+                        <div>
+                            <%if current_user.id == book.user.id%>
+
+                                <form>
+                            <%= link_to 'edit this book', edit_book_path(book.id) %>
+                            <%= link_to 'delete this book', delete_path(book.id), method:"delete" %>
+                            </form>
+                            <%end%>
+                        </div>
+                        <br>
+
+                </div>
+            <%end%>

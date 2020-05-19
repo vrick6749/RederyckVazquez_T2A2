@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   get "/", to: "pages#home", as: "root"
   get "/books", to: "books#index", as: "intro"
+  get "/books/my_books", to: "books#mybooks", as: "my_books"
   post "/books", to: "books#create"
   get "/books/new", to: "books#new", as: "create_book"
   get "/books/:id", to: "books#show", as: "book"

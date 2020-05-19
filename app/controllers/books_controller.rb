@@ -9,6 +9,11 @@ class BooksController < ApplicationController
         
     end
 
+    def mybooks    
+     @books = current_user.books
+        
+    end
+
 
 
     def show
