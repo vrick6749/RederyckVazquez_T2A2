@@ -80,7 +80,7 @@ Being a two way market place the application requires users to be indentified. T
 
 
 ##### 5. Discuss the database relations to be implemented.
-![This is an image of your ERD](images/ERDBookstore.jpeg)
+![This is an image of your ERD](app/assets/images/ERDBookstore.jpeg)
 
 * Provides coherent discussion of the database relations, with reference to the ERD
 
