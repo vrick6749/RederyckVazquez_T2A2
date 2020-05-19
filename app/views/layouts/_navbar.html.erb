@@ -16,6 +16,7 @@
           <div class="navbar-end">
             
             <% if user_signed_in?%>
+                <%= link_to "Home", root_path, class: "navbar-item" %>
                 <%= link_to "All Books", intro_path, class: "navbar-item" %>
                 <%= link_to "My Books", my_books_path, class: "navbar-item"%>
                 <div class="navbar-item"><%= link_to "logout", destroy_user_session_path, method: :delete%></div>
