@@ -95,16 +95,17 @@ Being a two way market place the application requires users to be indentified. T
 
 ##### 8. Provide Wireframes for your App.
 ![This is an image of your wire frames](/app/assets/images/Homepage.jpeg) 
-![This is an image of your wire frames](/app/assets/images/Tablethomeview.jpeg)   
 ![This is an image of your wire frames](/app/assets/images/LoginSignup.jpeg)  
+![This is an image of your wire frames](/app/assets/images/Userloggedin.jpeg) 
+
 ![This is an image of your wire frames](/app/assets/images/MobileLoginSignUpPage.jpeg)
-![This is an image of your wire frames](/app/assets/images/LoginSignup.jpeg)  
 ![This is an image of your wire frames](/app/assets/images/withsearchinput.jpeg)    
 ![This is an image of your wire frames](/app/assets/images/Userviewingcurrentlisting.jpeg)    
-![This is an image of your wire frames](/app/assets/images/Userloggedin.jpeg)    
+
+![This is an image of your wire frames](/app/assets/images/Tablethomeview.jpeg)    
 
 
-![This is an image of your wire frames](This is the relative path to it)  
+ 
 * More than five detailed and well designed wireframes provided, for several different screen sizes (as required for the app)
 
 ##### 9. Describe the way tasks are planned and tracked in your project.
