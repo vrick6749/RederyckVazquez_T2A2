@@ -109,10 +109,8 @@ Being a two way market place the application requires users to be indentified. T
 * More than five detailed and well designed wireframes provided, for several different screen sizes (as required for the app)
 
 ##### 9. Describe the way tasks are planned and tracked in your project.
-![This is an image of your task planning](This is the relative path to it)
-![This is an image of your task planning](This is the relative path to it)
-![This is an image of your task planning](This is the relative path to it)
-![This is an image of your task planning](This is the relative path to it)
+
+![This is an image of your task planning](/app/assets/images/Story.png)
 * Shows significant planning for how tasks are planned and tracked, including a full description of the process and of the tools used
 
 ##### 10. ERD provided represents a normalised database model.
