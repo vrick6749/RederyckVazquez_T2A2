@@ -95,6 +95,14 @@ Being a two way market place the application requires users to be indentified. T
 * You also just use normal markdown to describe them
 * User stories are well thought out, relevant, and comprehensively cover the needs of the app
 
+ ###### Functionality
+
+ ###### Layout
+
+ ###### Design
+
+ ###### Extras
+
 ##### 8. Provide Wireframes for your App.
 ![This is an image of your wire frames](/app/assets/images/Homepage.jpeg) 
 ![This is an image of your wire frames](/app/assets/images/LoginSignup.jpeg)  
