@@ -9,17 +9,17 @@ Link to github repo: www.github.myrepo.com
 Each time you have completed a requirement check it off the list. This way it will be easy for the educators as well as yourselves to track your progress.
 
 
-- [ ] 1. Create your app using Ruby on Rails.
-- [ ] 2. Use Postgresql database in development and production.
-- [ ] 3. My app has authentication (eg. Devise).
-- [ ] 4. My app has authorisation (i.e. users have restrictions on what they can see and edit).
-- [ ] 5. My app has some type of file (eg. images) uploading capability.
-- [ ] 6. My app is deployed to Heroku (recommended) or AWS.
-- [ ] 7. I have identified the problem I am trying to solve by building this particular marketplace app.
-- [ ] 8. I have explained why is it a problem that needs solving.
-- [ ] 9. I have provided a link (URL) to my deployed app (i.e. website)
-- [ ] 10. I have provided a link to my GitHub repository (repo). I have ensured the repo is accessible by my Educators.
-- [ ] 11. I have a complete description of my marketplace app (website), including:  
+- [x] 1. Create your app using Ruby on Rails.
+- [x] 2. Use Postgresql database in development and production.
+- [x] 3. My app has authentication (eg. Devise).
+- [x] 4. My app has authorisation (i.e. users have restrictions on what they can see and edit).
+- [x] 5. My app has some type of file (eg. images) uploading capability.
+- [x] 6. My app is deployed to Heroku (recommended) or AWS.
+- [x] 7. I have identified the problem I am trying to solve by building this particular marketplace app.
+- [] 8. I have explained why is it a problem that needs solving.
+- [] 9. I have provided a link (URL) to my deployed app (i.e. website)---->https://bookstopia.herokuapp.com/books
+- [] 10. I have provided a link to my GitHub repository (repo). I have ensured the repo is accessible by my Educators.
+- [] 11. I have a complete description of my marketplace app (website), including:  
         - 11.1 Purpose  
         - 11.2 Functionality / features  
         - 11.3 Sitemap  
@@ -28,7 +28,7 @@ Each time you have completed a requirement check it off the list. This way it wi
         - 11.6 Tech stack (e.g. html, css, deployment platform, etc)  
 
 - [ ] 12. I have provided user stories for my app
-- [ ] 13. I have provided Wire-Frames for my app 
+- [x] 13. I have provided Wire-Frames for my app 
 - [ ] 14. I have provided an ERD for my app
 - [ ] 15. I have explained the different high-level components (abstractions) in my app
 - [ ] 16. I have listed and described any third party services that your app will use
@@ -66,12 +66,14 @@ Bulma is a styling application. This applicaiton is derived from the css and mai
 ##### 3.1. Identify the problem you’re trying to solve by building this particular marketplace App?
 * Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting
 
-Most online markets such as Ebay and gumtree contain broad range of products listings, which can be disrupt the attention of a potential book buyer. Listing priority is also monetized, which can push down other listings. Big markets also capitalize on individuals by charging fees and even comission based on a sale, leading to inflated prices which are then passed on to the end consumer.
- Bookstopia is aimed to create an online marketplace, where it focuses on selling both new and used books, but mainly focusing on the latter. By selling used books online Bookstopia can help in reducing waste, as unused books have the potential to be reused. Book prices may also be significantly lower as the middle man is eliminated, making books affordable. Some books may even be marked down at the discrecion of the seller due to slight cosmetic damage. The use of the application is also completely free, where all profits from a listing sale will go directly to the seller without charge of commision, allowing for extra income. The aim of keeping the application completely free is to encourage lower prices from private sellers. Bookstopia will be powered by minimal advertisements, to fund constant development.
+In the current Australian economy especially post the Corona virus unemployment rates would have increased. Thousands of people will be under financial stress. These people may have unused books lying around, which they can easily monetize by posting it in a market place. Although certain books may not fetch a decent amount, it is still extra income which families may use for common household utilities. Some books may also have significant value to other indiviuals e.g. a university student requiring a certain text book, which can be costly, Bookstopia aims to reduce these prices and make books more accessible for everyone.
+
 
 ##### 3.2 Why is the problem identified a problem that needs solving?--------------------------------------------------------------
 * Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting
- 
+
+ Most online markets such as Ebay and gumtree contain broad range of products listings, which can be disrupt the attention of a potential book buyer. Listing priority is also monetized, which can push down other listings. Big markets also capitalize on individuals by charging fees and even comission based on a sale, leading to inflated prices which are then passed on to the end consumer.
+ Bookstopia is aimed to create an online marketplace, where it focuses on selling both new and used books, but mainly focusing on the latter. By selling used books online Bookstopia can help in reducing waste, as unused books have the potential to be reused. Book prices may also be significantly lower as the middle man is eliminated, making books affordable. Some books may even be marked down at the discrecion of the seller due to slight cosmetic damage. The use of the application is also completely free, where all profits from a listing sale will go directly to the seller without charge of commision, allowing for extra income. The aim of keeping the application completely free is to encourage lower prices from private sellers. Bookstopia will be powered by minimal advertisements, to fund constant development.
 
 ##### 4. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
 * Complete discussion of the project’s models with an understanding of how its active record associations function
@@ -116,7 +118,7 @@ Being a two way market place the application requires users to be indentified. T
 * Shows significant planning for how tasks are planned and tracked, including a full description of the process and of the tools used
 
 ##### 10. ERD provided represents a normalised database model.
-![This is an image of your ERD](This is the relative path to it)
+![This is an image of your ERD](app/assets/images/ERDBookstore.jpeg)
 * Meets D with no duplication and ideal definition of entities.
 
 ## Section 3: Code specific assessment. 
