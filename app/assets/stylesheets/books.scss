@@ -1,12 +1,23 @@
+.navbar {
+    background-color: rgba($color: #333131, $alpha: 0.8);
+}
+.navbar-item{
+    color:white;
+}
 .book-card {
-    width: 20%;
-    display: inline-block;
+    min-height: 300px;
+    max-width: 250px;
+    // display: inline-block;
+    
     padding: 8px;
     margin: 8px;
 }
 
 .book-wrapper {
-    text-align: center;
+    // text-align: center;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
 }
 
 .bold {

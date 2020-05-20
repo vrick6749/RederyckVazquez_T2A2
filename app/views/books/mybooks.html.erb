@@ -1,6 +1,8 @@
 
 <%= image_tag "morebooks.jpg", class:"library_photo" %>
+<div class ="book-wrapper">
 <%=render "bookcard", books: @books%>
+</div>
 <div class ="button">
     <%= link_to "Create a book", create_book_path%>
 </div>
