@@ -91,7 +91,7 @@ Being a two way market place the application requires users to be indentified. T
 * Flawless, complex, complete, and well thought through ERDs provided
 
 ##### 7. Provide User stories for your App.
-![This is an image of your user stories](This is the relative path to it)
+![This is an image of your user stories](/app/assets/images/Story.png)
 * You also just use normal markdown to describe them
 * User stories are well thought out, relevant, and comprehensively cover the needs of the app
 
