@@ -85,6 +85,7 @@ R7 R8 R11
 
 ##### 4. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
 * Complete discussion of the project’s models with an understanding of how its active record associations function
+* R18 R19
 
 Being a two way market place the application requires users to be indentified. The users will be given specific values which can make individual users unique amongst others, this includes but is not limited to username/ email and password. These values can then be called upon in order to create particular sessions as well as querying parameters within the application to determine a particular users relationship with other objects. Since Bookstopia is an online bookstore a model must be crated to illustrate to the program what a book is. In this particular case a picture(book cover), author, publisher, price and genre is what a book is comprised of. The author, genre and publisher when examined, may repeatedly be used throughout the existence of multiple book listings. The details of these details may also have the potential of overscoping of what a book truely is, hence models for each values have been created. For simplicity author, genre and publisher were just assigned a cloumn/ value of name. Now everytime a user is logged in to create a book he/she is able to assign associations between the book and a particular author, genre and publisher, on top of the desired price and cover photo upload. Behind the scenes the associations are being created through the use of model relationship statements (e.g. has_many and has_one) and the use of tables with foreign keys. Every object made under a certain class instance receives a primary key, and it is when these primary keys are placed in another table other than itself does it become a foreign key, which binds two different data creating a relationship. A special case for the relationship between genre and book, since a book can have multiple genres. To adhere to the dry principle, a has_many through: relationship had to be utilized, and although not a direct relationship, the join table still makes use of foreign keys to create associations between the two models. 
 
@@ -94,7 +95,7 @@ Being a two way market place the application requires users to be indentified. T
 * Provides coherent discussion of the database relations, with reference to the ERD
 ![This is an image of your user stories](/app/assets/images/Relationship.png)
 ![This is an image of your ERD](app/assets/images/NewERDBookstore.jpeg)
-
+* R14 R18 R19
 
 The applications main aim is to create a listing of books available to be sold by the user. Under the Book model it can be seen that it contains multiple elements. As both the publisher and the author will contain information that overscopes the book model, they are given their own database models. In order to keep these entities intertwined the book was created to take in foreign keys for both the Author and Publishers. This will give users full access to the author and publisher details associated with the particular book.
 
@@ -106,6 +107,8 @@ A problem to consider was the fact that some books may have multiple genres. Alt
 
 ##### 6. Provide your database schema design.
 * Flawless, complex, complete, and well thought through ERDs provided
+* R14
+![This is an image of your ERD](app/assets/images/NewERDBookstore.jpeg)
 
 ![This is an image of relationship diagram](/app/assets/images/Relationship.png)
 
@@ -113,6 +116,7 @@ A problem to consider was the fact that some books may have multiple genres. Alt
 ![This is an image of your user stories](/app/assets/images/Stories.png)
 * You also just use normal markdown to describe them
 * User stories are well thought out, relevant, and comprehensively cover the needs of the app
+* R12 R15
 
 
 # Layout
@@ -137,6 +141,7 @@ Design wise the application used the Bulma format. Bulma makes use of flexbox cs
 Some extra features that are to be integrated are the search feature, which can allow for better book navigation throughout the app. A map location is also to be implemented to show the location of the company. This will only be implemented if time permits.
 
 ##### 8. Provide Wireframes for your App.
+* R13
 ![This is an image of your wire frames](/app/assets/images/Homepage.jpeg) 
 ![This is an image of your wire frames](/app/assets/images/LoginSignup.jpeg)  
 ![This is an image of your wire frames](/app/assets/images/Userloggedin.jpeg) 
@@ -157,7 +162,7 @@ Some extra features that are to be integrated are the search feature, which can 
 
 ![This is an image of your task planning](/app/assets/images/Stories.png)
 * Shows significant planning for how tasks are planned and tracked, including a full description of the process and of the tools used
-
+* R20
 The project was planned through the use of the github project board in conjuntion with the developed wireframes. In the project board the application development was divided into 4 columns. The most crucial aspects are the layouts and functionality columns. These categories are the bare minimum for the application to function. These are then followed by the design section and finally the extras.
 
 The columns are further divided into smaller tasks which have a checkbox tag alongside it. This allows for better time management and tracking of progress as the project can be broken down into manageable sections and can be ticked off once concluded. As working with the porject is unpredictable changes can also be easily incorporated where certain tasks can be moved from one column to the other, removed if no longer required and added if necessary for the application.
