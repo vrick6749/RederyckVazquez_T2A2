@@ -19,8 +19,8 @@ Each time you have completed a requirement check it off the list. This way it wi
 - [x] 7. I have identified the problem I am trying to solve by building this particular marketplace app.
 - [x] 8. I have explained why is it a problem that needs solving.
 - [x] 9. I have provided a link (URL) to my deployed app (i.e. website)---->
-- [] 10. I have provided a link to my GitHub repository (repo). I have ensured the repo is accessible by my Educators.
-- [] 11. I have a complete description of my marketplace app (website), including:  
+- [x] 10. I have provided a link to my GitHub repository (repo). I have ensured the repo is accessible by my Educators.
+- [x] 11. I have a complete description of my marketplace app (website), including:  
         - 11.1 Purpose  
         - 11.2 Functionality / features  
         - 11.3 Sitemap  
@@ -28,20 +28,20 @@ Each time you have completed a requirement check it off the list. This way it wi
         - 11.5 Target audience  
         - 11.6 Tech stack (e.g. html, css, deployment platform, etc)  
 
-- [ ] 12. I have provided user stories for my app
+- [x] 12. I have provided user stories for my app
 - [x] 13. I have provided Wire-Frames for my app 
-- [ ] 14. I have provided an ERD for my app
-- [ ] 15. I have explained the different high-level components (abstractions) in my app
-- [ ] 16. I have listed and described any third party services that your app will use
-- [ ] 17. I have described my projects models in terms of the relationships (active record associations) they have with each other.
-- [ ] 18. I have discussed the database relations to be implemented in my application
-- [ ] 19. I have provided my database schema design
-- [ ] 20. I have described the way tasks are allocated and tracked in my project
+- [x] 14. I have provided an ERD for my app
+- [x] 15. I have explained the different high-level components (abstractions) in my app
+- [x] 16. I have listed and described any third party services that your app will use
+- [x] 17. I have described my projects models in terms of the relationships (active record associations) they have with each other.
+- [x] 18. I have discussed the database relations to be implemented in my application
+- [x] 19. I have provided my database schema design
+- [x] 20. I have described the way tasks are allocated and tracked in my project
 
 NB Slide/Presentation specific requirements
 
-- [ ] 21. An outline of the problem I solved by building this particular marketplace app, and why it’s a problem that needs solving.
-- [ ] 22. A well planned walkthrough of my app
+- [x] 21. An outline of the problem I solved by building this particular marketplace app, and why it’s a problem that needs solving.
+- [x] 22. A well planned walkthrough of my app
 - [ ] 23. I have practived my presentation at least once and it is 5-6 minutes long. 
 
 # https://bookstopia.herokuapp.com/books
