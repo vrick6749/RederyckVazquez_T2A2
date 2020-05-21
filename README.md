@@ -56,6 +56,8 @@ The application makes use if different programs and languages in order to develo
 
 The application also makes use of postgresql which is a relational database management system, allowing for the creation, deletion, editing and segregation of data for a specified database.
 
+In order to render the view HTML, CSS, SCSS and embeded ruby were utilized. SCSS along with CSS permits a way to beautify the application. It also allows the application to be standardised where it will be responsive to accodring its current viewport. Slight effects incorporated
+
 ##### 2. List and describe any 3rd party services.
 * Precisely explains and shows understanding of the different high-level components of the app
 
@@ -108,24 +110,24 @@ A problem to consider was the fact that some books may have multiple genres. Alt
 
 # Layout
 
-        To layout the foundation of the application after design the MVC had to be set up. The MVC and routing works together to assimilate code and create meaningful content for the user. The controllers were first established as it mediates the communication between the model and the view, via the CRUD restful API methods. URL links were then assigned for each specific method in the controller. The desired structure of the database tables along with relationships are then created in the model. To finalize and check as to whether or not these components are linked the view is lastly made to render data. The main views created for this application was to show a current book, view all book listings, view the current users listings, edit a listing and the main landing page.
+To layout the foundation of the application after design the MVC had to be set up. The MVC and routing works together to assimilate code and create meaningful content for the user. The controllers were first established as it mediates the communication between the model and the view, via the CRUD restful API methods. URL links were then assigned for each specific method in the controller. The desired structure of the database tables along with relationships are then created in the model. To finalize and check as to whether or not these components are linked the view is lastly made to render data. The main views created for this application was to show a current book, view all book listings, view the current users listings, edit a listing and the main landing page.
 
 # Functionality
 
-        Although the application is able to render data in plain view, user interaction is a crucial point in applications. A couple of functionality were added to enhance user experience and make a more dynamic application.
-        A form was made to allow user to input specific details of a book they wish to sell, all predefined in the book model created earlier. This form also permitted the attachment of images which is linked to an external database AWS. This allows for larger data storage, which can assist in preventing the retardation of the application.
+Although the application is able to render data in plain view, user interaction is a crucial point in applications. A couple of functionality were added to enhance user experience and make a more dynamic application.
+A form was made to allow user to input specific details of a book they wish to sell, all predefined in the book model created earlier. This form also permitted the attachment of images which is linked to an external database AWS. This allows for larger data storage, which can assist in preventing the retardation of the application.
 
-        The form also has the capability to detect unfilled parameters that are required and re-render the form and alert the user. Lastly the form was made so that it can accept multiple genres as most books would have. 
+The form also has the capability to detect unfilled parameters that are required and re-render the form and alert the user. Lastly the form was made so that it can accept multiple genres as most books would have. 
 
-        A payment gem was also inserted "stripe" in the application.This gives the application the ability to send a link to a secure website, where transactions can be conducted. Major details of transactions such as validations, conversions and notification messages are inherently handled by the gem.
+A payment gem was also inserted "stripe" in the application.This gives the application the ability to send a link to a secure website, where transactions can be conducted. Major details of transactions such as validations, conversions and notification messages are inherently handled by the gem.
 
-        Security and association of transactions are then installed through a gem named devise. This allows for the creation of unique identification for new and existing users, wherein all books created by that user is associated with that user's ID, and more inportantly when they proceed any payments, that the transaction is linked to their account.
+Security and association of transactions are then installed through a gem named devise. This allows for the creation of unique identification for new and existing users, wherein all books created by that user is associated with that user's ID, and more inportantly when they proceed any payments, that the transaction is linked to their account.
 # Design
 
-        Design wise the application used the Bulma format. Bulma makes use of flexbox css along with premade classes, which can be assigned to objects in the code. This type of inheritance allows for responsive design, wherein the view of application automatically responds to dynamic views of the users device may it be a laptop, mobile phone or tablet. This allows the application to have more better design, smooth flow.
+Design wise the application used the Bulma format. Bulma makes use of flexbox css along with premade classes, which can be assigned to objects in the code. This type of inheritance allows for responsive design, wherein the view of application automatically responds to dynamic views of the users device may it be a laptop, mobile phone or tablet. This allows the application to have more better design, smooth flow.
 # Extras
 
-        Some extra features that are to be integrated are the search feature, which can allow for better book navigation throughout the app. A map location is also to be implemented to show the location of the company.
+Some extra features that are to be integrated are the search feature, which can allow for better book navigation throughout the app. A map location is also to be implemented to show the location of the company.
 
 ##### 8. Provide Wireframes for your App.
 ![This is an image of your wire frames](/app/assets/images/Homepage.jpeg) 
@@ -160,10 +162,6 @@ Although no longer present, I had a column which had headers of issue. This enab
 * Meets D with no duplication and ideal definition of entities.
 
 ## Section 3: Code specific assessment. 
-
-This section can be deleted from the readme. I have only included it here to draw your attention to it. 
-
-LOL^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^LOL^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ##### 11. Model implementation represents a normalised database model.
 * Meets D with no duplication and ideal model implementation.
