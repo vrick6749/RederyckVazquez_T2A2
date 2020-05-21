@@ -1,9 +1,9 @@
 # README
-# https://bookstopia.herokuapp.com/books
+
 # My 2 way market place template
 
-Link to the deployed app: www.myapp.com 
-Link to github repo: www.github.myrepo.com
+Link to the deployed app:  https://bookstopia.herokuapp.com/books 
+Link to github repo: https://github.com/vrick6749/RederyckVazquez_T2A2
 
 ## Section 1: Requirement checklist 
 
