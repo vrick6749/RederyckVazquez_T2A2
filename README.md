@@ -91,7 +91,7 @@ Being a two way market place the application requires users to be indentified. T
 * Flawless, complex, complete, and well thought through ERDs provided
 
 ##### 7. Provide User stories for your App.
-![This is an image of your user stories](/app/assets/images/Story.png)
+![This is an image of your user stories](/app/assets/images/Stories.png)
 * You also just use normal markdown to describe them
 * User stories are well thought out, relevant, and comprehensively cover the needs of the app
 
@@ -109,8 +109,9 @@ Being a two way market place the application requires users to be indentified. T
 
         Security and association of transactions are then installed through a gem named devise. This allows for the creation of unique identification for new and existing users, wherein all books created by that user is associated with that user's ID, and more inportantly when they proceed any payments, that the transaction is linked to their account.
  #### Design
-        Design wise the application used the Bulma format. Bulma makes use of flexbox css along with premade classes, which can be assigned to objects in the code. This type of inheritance allows for responsive design, wherein the view of application automatically responds to dynamic views of the users device may it be a laptop, mobile phone or tablet. This allows the application to have more better design, smooth flow 
+        Design wise the application used the Bulma format. Bulma makes use of flexbox css along with premade classes, which can be assigned to objects in the code. This type of inheritance allows for responsive design, wherein the view of application automatically responds to dynamic views of the users device may it be a laptop, mobile phone or tablet. This allows the application to have more better design, smooth flow.
  #### Extras
+        Some extra features that are to be integrated are the search feature, which can allow for better book navigation throughout the app. A map location is also to be implemented to show the location of the company.
 
 ##### 8. Provide Wireframes for your App.
 ![This is an image of your wire frames](/app/assets/images/Homepage.jpeg) 
@@ -131,7 +132,7 @@ Being a two way market place the application requires users to be indentified. T
 
 ##### 9. Describe the way tasks are planned and tracked in your project.
 
-![This is an image of your task planning](/app/assets/images/Story.png)
+![This is an image of your task planning](/app/assets/images/Stories.png)
 * Shows significant planning for how tasks are planned and tracked, including a full description of the process and of the tools used
 
 ##### 10. ERD provided represents a normalised database model.
