@@ -52,7 +52,9 @@ NB leave the Titles as they are and answer the questions below.
 ##### 1. Explain the different high-level components (abstractions) in your App.---------------------------------------------------------
 * Includes a complete and detailed description of third party services used in the app
 
+The application makes use if different programs and languages in order to develop a coherent and functional UI. In order to create the backbone of the application Ruby on rails was implemented. The ruby on rails framework is prefabricated and follows a rule of convention over configuration, making it easier to develop the skeleton of the application. The skeleton being created by rails is the MVC. 
 
+The application also makes use of postgresql which is a relational database management system, allowing for the creation, deletion, editing and segregation of data for a specified database.
 
 ##### 2. List and describe any 3rd party services.
 * Precisely explains and shows understanding of the different high-level components of the app
@@ -84,7 +86,15 @@ Being a two way market place the application requires users to be indentified. T
 ##### 5. Discuss the database relations to be implemented.
 
 * Provides coherent discussion of the database relations, with reference to the ERD
-![This is an image of your ERD](app/assets/images/ERDBookstore.jpeg)
+![This is an image of your ERD](app/assets/images/NewERDBookstore.jpeg)
+
+
+The applications main aim is to create a listing of books available to be sold by the user. Under the Book model it can be seen that it contains multiple elements. As both the publisher and the author will contain information that overscopes the book model, they are given their own database models. In order to keep these entities intertwined the book was created to take in foreign keys for both the Author and Publishers. This will give users full access to the author and publisher details associated with the particular book.
+
+A problem to consider was the fact that some books may have multiple genres. Although we can place in multiple columns for genre, it will not follow the dry principle as some books will not occupy all the columns. In order to overcome this a join table was created. Genres, just like author and publisher was separated from book into its own model, giving it an independent ID. The genre and the book are then joined by the BookGenre table, which will accept 2 foreign keys which belongs to the book ID and the genre ID. This again creates a relationship between the genre model and the book model. The join table follows dry as it will only record data when both instances are present, eliminating the previous idea of unecessary columns for other books that may be created not having a lot of genres. It is also worth pointing that the relationship in the diagram a book can only have one particular author and publisher, and can have many genres through the BookGenre table. While on the flip side an author, genre and publisher can have many zero to many books.
+
+
+
 
 
 ##### 6. Provide your database schema design.
@@ -146,7 +156,7 @@ The columns are further divided into smaller tasks which have a checkbox tag alo
 Although no longer present, I had a column which had headers of issue. This enabled me to keep track of sections of the project which I was having issues with, setting them aside for awhile and moving on the another task. The github project board also allows for notes to be placed inside each card in the columns, where you can more details about issues and potential improvents you wish to make for that particular section.
 
 ##### 10. ERD provided represents a normalised database model.
-![This is an image of your ERD](app/assets/images/ERDBookstore.jpeg)
+![This is an image of your ERD](app/assets/images/NewERDBookstore.jpeg)
 * Meets D with no duplication and ideal definition of entities.
 
 ## Section 3: Code specific assessment. 
