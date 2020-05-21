@@ -54,11 +54,13 @@ NB leave the Titles as they are and answer the questions below.
 ##### 1. Explain the different high-level components (abstractions) in your App.---------------------------------------------------------
 * Includes a complete and detailed description of third party services used in the app
 * R11 R15 R16
-The application makes use if different programs and languages in order to develop a coherent and functional UI. In order to create the backbone of the application Ruby on rails was implemented. The ruby on rails framework is prefabricated and follows a rule of convention over configuration, making it easier to develop the skeleton of the application. The skeleton being created by rails is the MVC. 
+The application makes use if different programs and languages in order to develop a coherent and functional UI. In order to create the backbone of the application Ruby on rails was implemented. The ruby on rails framework is prefabricated and follows a rule of convention over configuration, making it easier to develop the skeleton of the application. The skeleton being created by rails is the MVC. Ruby on rails also gives the capability of inserting block of functional codes named gems, which can accentuate the applications functionality. An example of this is the devise gem, which will be discussed further in this documentation.
 
 The application also makes use of postgresql which is a relational database management system, allowing for the creation, deletion, editing and segregation of data for a specified database.
 
-In order to render the view HTML, CSS, SCSS and embeded ruby were utilized. SCSS along with CSS permits a way to beautify the application. It also allows the application to be standardised where it will be responsive to accodring its current viewport. Slight effects incorporated
+In order to render the view HTML, CSS, SCSS and embeded ruby were utilized. SCSS along with CSS permits a way to beautify the application. It also allows the application to be standardised where it will be responsive to accodring its current viewport. Slight effects are incorporated to also engage users. Embeded ruby grants the ability to connect the view to the database, it allows data sourcing from the backend to be displayed to the users. HTML on the other hand provides the framework for the view being rendered to the audience.
+
+Other third part applications are further discussed in the section below.
 
 ##### 2. List and describe any 3rd party services.
 * Precisely explains and shows understanding of the different high-level components of the app
@@ -69,7 +71,7 @@ Stripe is a third party application which allows a business to receive payments 
 
 Bulma is a styling application. This applicaiton is derived from the css and mainly utilizes the power of flexbox. Flexbox enables for the application to be dynamic as the objects within the page become responsive and scale according to the devise it is currently being viewed on. A key feature of Bulma are the pre-fabricated templates, which allows for convinient insertion of specific designs. This is accomplished mainly through the use of containers and classes. Although pre-made, Bulma designs can still be overwritten as per the users discretion, making designing flexible.
 
-Heroku is a cloud platform, which allows scallable application to be launched online, without having to rely on the local host. This makes the app acessible to multiple users.
+Heroku is a cloud platform, which allows scallable application to be launched online, without having to rely on the local host. This makes the app acessible to multiple users and even developers whom would like to see how the application runs online.
 
 ##### 3.1. Identify the problem you’re trying to solve by building this particular marketplace App?
 * Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting
@@ -85,7 +87,7 @@ In the current Australian economy especially post the Corona virus unemployment 
 
 ##### 4. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
 * Complete discussion of the project’s models with an understanding of how its active record associations function
-* R18 R19
+* R11 R18 R19
 
 Being a two way market place the application requires users to be indentified. The users will be given specific values which can make individual users unique amongst others, this includes but is not limited to username/ email and password. These values can then be called upon in order to create particular sessions as well as querying parameters within the application to determine a particular users relationship with other objects. Since Bookstopia is an online bookstore a model must be crated to illustrate to the program what a book is. In this particular case a picture(book cover), author, publisher, price and genre is what a book is comprised of. The author, genre and publisher when examined, may repeatedly be used throughout the existence of multiple book listings. The details of these details may also have the potential of overscoping of what a book truely is, hence models for each values have been created. For simplicity author, genre and publisher were just assigned a cloumn/ value of name. Now everytime a user is logged in to create a book he/she is able to assign associations between the book and a particular author, genre and publisher, on top of the desired price and cover photo upload. Behind the scenes the associations are being created through the use of model relationship statements (e.g. has_many and has_one) and the use of tables with foreign keys. Every object made under a certain class instance receives a primary key, and it is when these primary keys are placed in another table other than itself does it become a foreign key, which binds two different data creating a relationship. A special case for the relationship between genre and book, since a book can have multiple genres. To adhere to the dry principle, a has_many through: relationship had to be utilized, and although not a direct relationship, the join table still makes use of foreign keys to create associations between the two models. 
 
@@ -99,14 +101,16 @@ Being a two way market place the application requires users to be indentified. T
 
 The applications main aim is to create a listing of books available to be sold by the user. Under the Book model it can be seen that it contains multiple elements. As both the publisher and the author will contain information that overscopes the book model, they are given their own database models. In order to keep these entities intertwined the book was created to take in foreign keys for both the Author and Publishers. This will give users full access to the author and publisher details associated with the particular book.
 
-A problem to consider was the fact that some books may have multiple genres. Although we can place in multiple columns for genre, it will not follow the dry principle as some books will not occupy all the columns. In order to overcome this a join table was created. Genres, just like author and publisher was separated from book into its own model, giving it an independent ID. The genre and the book are then joined by the BookGenre table, which will accept 2 foreign keys which belongs to the book ID and the genre ID. This again creates a relationship between the genre model and the book model. The join table follows dry as it will only record data when both instances are present, eliminating the previous idea of unecessary columns for other books that may be created not having a lot of genres. It is also worth pointing that the relationship in the diagram a book can only have one particular author and publisher, and can have many genres through the BookGenre table. While on the flip side an author, genre and publisher can have many zero to many books.
+A problem to consider was the fact that some books may have multiple genres. Although we can place in multiple columns for genre, it will not follow the dry principle as some books will not occupy all the columns. In order to overcome this a join table was created. Genres, just like author and publisher was separated from book into its own model, giving it an independent ID. The genre and the book are then joined by the BookGenre table, which will accept 2 foreign keys which belongs to the book ID and the genre ID. This again creates a relationship between the genre model and the book model. The join table follows dry as it will only record data when both instances are present, eliminating the previous idea of unecessary columns for other books that may be created not having a lot of genres. It is also worth pointing that the relationship in the diagram a book can only have one particular author and publisher, and can have many genres through the BookGenre table. On the flip side an author, genre and publisher can have many zero to many books.
 
+Following the creation of the books model a gem devise was installed. This automatically created the database model for users. The user model contains the email and an encrypted password, which once accessed grant the person a unique ID which identifies them as a specific user. The ID of the user is then what is utilized by the application to determine things such as whom purchased a book, or whom a particular book belongs to. When refering to the diagram it can be seen that the user is able to have multiple books, although a book only belongs to a particular user.
 
+A few features that are yet to be implemented are the favorites and the basket. Which would have a close resemblance to the join table, although favorites it to mark certain books as a favorite and a basket would be tallied at the end when a user makes a purchase linking them to stripe.
 
 
 
 ##### 6. Provide your database schema design.
-* Flawless, complex, complete, and well thought through ERDs provided
+
 * R14
 ![This is an image of your ERD](app/assets/images/NewERDBookstore.jpeg)
 
@@ -119,11 +123,11 @@ A problem to consider was the fact that some books may have multiple genres. Alt
 * R12 R15
 
 
-# Layout
+## Layout
 
 To layout the foundation of the application after design the MVC had to be set up. The MVC and routing works together to assimilate code and create meaningful content for the user. The controllers were first established as it mediates the communication between the model and the view, via the CRUD restful API methods. URL links were then assigned for each specific method in the controller. The desired structure of the database tables along with relationships are then created in the model. To finalize and check as to whether or not these components are linked the view is lastly made to render data. The main views created for this application was to show a current book, view all book listings, view the current users listings, edit a listing and the main landing page.
 
-# Functionality
+## Functionality
 
 Although the application is able to render data in plain view, user interaction is a crucial point in applications. A couple of functionality were added to enhance user experience and make a more dynamic application.
 A form was made to allow user to input specific details of a book they wish to sell, all predefined in the book model created earlier. This form also permitted the attachment of images which is linked to an external database AWS. This allows for larger data storage, which can assist in preventing the retardation of the application.
@@ -133,10 +137,10 @@ The form also has the capability to detect unfilled parameters that are required
 A payment gem was also inserted "stripe" in the application.This gives the application the ability to send a link to a secure website, where transactions can be conducted. Major details of transactions such as validations, conversions and notification messages are inherently handled by the gem.
 
 Security and association of transactions are then installed through a gem named devise. This allows for the creation of unique identification for new and existing users, wherein all books created by that user is associated with that user's ID, and more inportantly when they proceed any payments, that the transaction is linked to their account.
-# Design
+## Design
 
 Design wise the application used the Bulma format. Bulma makes use of flexbox css along with premade classes, which can be assigned to objects in the code. This type of inheritance allows for responsive design, wherein the view of application automatically responds to dynamic views of the users device may it be a laptop, mobile phone or tablet. This allows the application to have more better design, smooth flow.
-# Extras
+## Extras
 
 Some extra features that are to be integrated are the search feature, which can allow for better book navigation throughout the app. A map location is also to be implemented to show the location of the company. This will only be implemented if time permits.
 
