@@ -1,4 +1,5 @@
 # README
+# https://bookstopia.herokuapp.com/books
 # My 2 way market place template
 
 Link to the deployed app: www.myapp.com 
@@ -16,8 +17,8 @@ Each time you have completed a requirement check it off the list. This way it wi
 - [x] 5. My app has some type of file (eg. images) uploading capability.
 - [x] 6. My app is deployed to Heroku (recommended) or AWS.
 - [x] 7. I have identified the problem I am trying to solve by building this particular marketplace app.
-- [] 8. I have explained why is it a problem that needs solving.
-- [] 9. I have provided a link (URL) to my deployed app (i.e. website)---->https://bookstopia.herokuapp.com/books
+- [x] 8. I have explained why is it a problem that needs solving.
+- [x] 9. I have provided a link (URL) to my deployed app (i.e. website)---->
 - [] 10. I have provided a link to my GitHub repository (repo). I have ensured the repo is accessible by my Educators.
 - [] 11. I have a complete description of my marketplace app (website), including:  
         - 11.1 Purpose  
@@ -43,10 +44,11 @@ NB Slide/Presentation specific requirements
 - [ ] 22. A well planned walkthrough of my app
 - [ ] 23. I have practived my presentation at least once and it is 5-6 minutes long. 
 
-
+# https://bookstopia.herokuapp.com/books
 ### Rubric Criteria
 
 ## Section 2: Documentation 
+# https://bookstopia.herokuapp.com/books
 NB leave the Titles as they are and answer the questions below.
 
 ##### 1. Explain the different high-level components (abstractions) in your App.---------------------------------------------------------
@@ -61,11 +63,13 @@ In order to render the view HTML, CSS, SCSS and embeded ruby were utilized. SCSS
 ##### 2. List and describe any 3rd party services.
 * Precisely explains and shows understanding of the different high-level components of the app
 R11 R15 R16
-The Bookstopia app utilizes several third party services, namely Stripe, Amazon Web Services and Bulma. The creation of routes, methods, views and models are simply not sufficient to launch a scalable application, third party applications assists us in developing a more functional and scalable project. AWS serves as a data storage/ database since the Bookstopia allows for the upload of book images. Although a handful of images may not pose an issue for local databse, a scaled application will require a more robust database, as data uploads from multiple users may tally up beyond the local database capacity.
+The Bookstopia app utilizes several third party services, namely Stripe, Amazon Web Services, Heroku and Bulma. The creation of routes, methods, views and models are simply not sufficient to launch a scalable application, third party applications assists us in developing a more functional and scalable project. AWS serves as a data storage/ database since the Bookstopia allows for the upload of book images. Although a handful of images may not pose an issue for local databse, a scaled application will require a more robust database, as data uploads from multiple users may tally up beyond the local database capacity.
 
 Stripe is a third party application which allows a business to receive payments when a request is sent to pay for a product. The stripe application  has a boilerplate form which allows for ease of attaching required information, as to what was purchased and whom purchased it. Stripe automatically calculates any neccessary mathematical operations and deducts the designated amount of a particular product. Once the transaction is complete stripe then sends back a confirmation post to notify as to whether or not it was successful. Availing of this service carries a surcharge for every transaction conducted with stripe.
 
 Bulma is a styling application. This applicaiton is derived from the css and mainly utilizes the power of flexbox. Flexbox enables for the application to be dynamic as the objects within the page become responsive and scale according to the devise it is currently being viewed on. A key feature of Bulma are the pre-fabricated templates, which allows for convinient insertion of specific designs. This is accomplished mainly through the use of containers and classes. Although pre-made, Bulma designs can still be overwritten as per the users discretion, making designing flexible.
+
+Heroku is a cloud platform, which allows scallable application to be launched online, without having to rely on the local host. This makes the app acessible to multiple users.
 
 ##### 3.1. Identify the problem you’re trying to solve by building this particular marketplace App?
 * Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting
@@ -165,7 +169,8 @@ Although no longer present, I had a column which had headers of issue. This enab
 ![This is an image of your user stories](/app/assets/images/Relationship.png)
 * Meets D with no duplication and ideal definition of entities.
 
-## Section 3: Code specific assessment. 
+## Section 3: Code specific assessment.
+# https://bookstopia.herokuapp.com/books 
 
 ##### 11. Model implementation represents a normalised database model.
 * Meets D with no duplication and ideal model implementation.
