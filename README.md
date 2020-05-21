@@ -51,7 +51,7 @@ NB leave the Titles as they are and answer the questions below.
 
 ##### 1. Explain the different high-level components (abstractions) in your App.---------------------------------------------------------
 * Includes a complete and detailed description of third party services used in the app
-
+R11 R15 R 16
 The application makes use if different programs and languages in order to develop a coherent and functional UI. In order to create the backbone of the application Ruby on rails was implemented. The ruby on rails framework is prefabricated and follows a rule of convention over configuration, making it easier to develop the skeleton of the application. The skeleton being created by rails is the MVC. 
 
 The application also makes use of postgresql which is a relational database management system, allowing for the creation, deletion, editing and segregation of data for a specified database.
@@ -60,7 +60,7 @@ In order to render the view HTML, CSS, SCSS and embeded ruby were utilized. SCSS
 
 ##### 2. List and describe any 3rd party services.
 * Precisely explains and shows understanding of the different high-level components of the app
-
+R11 R15 R16
 The Bookstopia app utilizes several third party services, namely Stripe, Amazon Web Services and Bulma. The creation of routes, methods, views and models are simply not sufficient to launch a scalable application, third party applications assists us in developing a more functional and scalable project. AWS serves as a data storage/ database since the Bookstopia allows for the upload of book images. Although a handful of images may not pose an issue for local databse, a scaled application will require a more robust database, as data uploads from multiple users may tally up beyond the local database capacity.
 
 Stripe is a third party application which allows a business to receive payments when a request is sent to pay for a product. The stripe application  has a boilerplate form which allows for ease of attaching required information, as to what was purchased and whom purchased it. Stripe automatically calculates any neccessary mathematical operations and deducts the designated amount of a particular product. Once the transaction is complete stripe then sends back a confirmation post to notify as to whether or not it was successful. Availing of this service carries a surcharge for every transaction conducted with stripe.
@@ -69,13 +69,13 @@ Bulma is a styling application. This applicaiton is derived from the css and mai
 
 ##### 3.1. Identify the problem you’re trying to solve by building this particular marketplace App?
 * Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting
-
+R7 R8 R11
 In the current Australian economy especially post the Corona virus unemployment rates would have increased. Thousands of people will be under financial stress. These people may have unused books lying around, which they can easily monetize by posting it in a market place. Although certain books may not fetch a decent amount, it is still extra income which families may use for common household utilities. Some books may also have significant value to other indiviuals e.g. a university student requiring a certain text book, which can be costly, Bookstopia aims to reduce these prices and make books more accessible for everyone.
 
 
 ##### 3.2 Why is the problem identified a problem that needs solving?--------------------------------------------------------------
 * Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting
-
+R7 R8 R11
  Most online markets such as Ebay and gumtree contain broad range of products listings, which can be disrupt the attention of a potential book buyer. Listing priority is also monetized, which can push down other listings. Big markets also capitalize on individuals by charging fees and even comission based on a sale, leading to inflated prices which are then passed on to the end consumer.
  Bookstopia is aimed to create an online marketplace, where it focuses on selling both new and used books, but mainly focusing on the latter. By selling used books online Bookstopia can help in reducing waste, as unused books have the potential to be reused. Book prices may also be significantly lower as the middle man is eliminated, making books affordable. Some books may even be marked down at the discrecion of the seller due to slight cosmetic damage. The use of the application is also completely free, where all profits from a listing sale will go directly to the seller without charge of commision, allowing for extra income. The aim of keeping the application completely free is to encourage lower prices from private sellers. Bookstopia will be powered by minimal advertisements, to fund constant development.
 
@@ -88,6 +88,7 @@ Being a two way market place the application requires users to be indentified. T
 ##### 5. Discuss the database relations to be implemented.
 
 * Provides coherent discussion of the database relations, with reference to the ERD
+![This is an image of your user stories](/app/assets/images/Relationship.png)
 ![This is an image of your ERD](app/assets/images/NewERDBookstore.jpeg)
 
 
@@ -101,6 +102,8 @@ A problem to consider was the fact that some books may have multiple genres. Alt
 
 ##### 6. Provide your database schema design.
 * Flawless, complex, complete, and well thought through ERDs provided
+
+![This is an image of relationship diagram](/app/assets/images/Relationship.png)
 
 ##### 7. Provide User stories for your App.
 ![This is an image of your user stories](/app/assets/images/Stories.png)
@@ -127,7 +130,7 @@ Security and association of transactions are then installed through a gem named 
 Design wise the application used the Bulma format. Bulma makes use of flexbox css along with premade classes, which can be assigned to objects in the code. This type of inheritance allows for responsive design, wherein the view of application automatically responds to dynamic views of the users device may it be a laptop, mobile phone or tablet. This allows the application to have more better design, smooth flow.
 # Extras
 
-Some extra features that are to be integrated are the search feature, which can allow for better book navigation throughout the app. A map location is also to be implemented to show the location of the company.
+Some extra features that are to be integrated are the search feature, which can allow for better book navigation throughout the app. A map location is also to be implemented to show the location of the company. This will only be implemented if time permits.
 
 ##### 8. Provide Wireframes for your App.
 ![This is an image of your wire frames](/app/assets/images/Homepage.jpeg) 
@@ -159,6 +162,7 @@ Although no longer present, I had a column which had headers of issue. This enab
 
 ##### 10. ERD provided represents a normalised database model.
 ![This is an image of your ERD](app/assets/images/NewERDBookstore.jpeg)
+![This is an image of your user stories](/app/assets/images/Relationship.png)
 * Meets D with no duplication and ideal definition of entities.
 
 ## Section 3: Code specific assessment. 
