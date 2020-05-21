@@ -96,10 +96,10 @@ Being a two way market place the application requires users to be indentified. T
 * User stories are well thought out, relevant, and comprehensively cover the needs of the app
 
 
- #### Layout
+# Layout
         To layout the foundation of the application after design the MVC had to be set up. The MVC and routing works together to assimilate code and create meaningful content for the user. The controllers were first established as it mediates the communication between the model and the view, via the CRUD restful API methods. URL links were then assigned for each specific method in the controller. The desired structure of the database tables along with relationships are then created in the model. To finalize and check as to whether or not these components are linked the view is lastly made to render data. The main views created for this application was to show a current book, view all book listings, view the current users listings, edit a listing and the main landing page.
 
-#### Functionality
+# Functionality
         Although the application is able to render data in plain view, user interaction is a crucial point in applications. A couple of functionality were added to enhance user experience and make a more dynamic application.
         A form was made to allow user to input specific details of a book they wish to sell, all predefined in the book model created earlier. This form also permitted the attachment of images which is linked to an external database AWS. This allows for larger data storage, which can assist in preventing the retardation of the application.
 
@@ -108,9 +108,9 @@ Being a two way market place the application requires users to be indentified. T
         A payment gem was also inserted "stripe" in the application.This gives the application the ability to send a link to a secure website, where transactions can be conducted. Major details of transactions such as validations, conversions and notification messages are inherently handled by the gem.
 
         Security and association of transactions are then installed through a gem named devise. This allows for the creation of unique identification for new and existing users, wherein all books created by that user is associated with that user's ID, and more inportantly when they proceed any payments, that the transaction is linked to their account.
- #### Design
+# Design
         Design wise the application used the Bulma format. Bulma makes use of flexbox css along with premade classes, which can be assigned to objects in the code. This type of inheritance allows for responsive design, wherein the view of application automatically responds to dynamic views of the users device may it be a laptop, mobile phone or tablet. This allows the application to have more better design, smooth flow.
- #### Extras
+# Extras
         Some extra features that are to be integrated are the search feature, which can allow for better book navigation throughout the app. A map location is also to be implemented to show the location of the company.
 
 ##### 8. Provide Wireframes for your App.
