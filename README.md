@@ -53,7 +53,7 @@ NB leave the Titles as they are and answer the questions below.
 
 ##### 1. Explain the different high-level components (abstractions) in your App.---------------------------------------------------------
 * Includes a complete and detailed description of third party services used in the app
-R11 R15 R 16
+* R11 R15 R16
 The application makes use if different programs and languages in order to develop a coherent and functional UI. In order to create the backbone of the application Ruby on rails was implemented. The ruby on rails framework is prefabricated and follows a rule of convention over configuration, making it easier to develop the skeleton of the application. The skeleton being created by rails is the MVC. 
 
 The application also makes use of postgresql which is a relational database management system, allowing for the creation, deletion, editing and segregation of data for a specified database.
@@ -62,7 +62,7 @@ In order to render the view HTML, CSS, SCSS and embeded ruby were utilized. SCSS
 
 ##### 2. List and describe any 3rd party services.
 * Precisely explains and shows understanding of the different high-level components of the app
-R11 R15 R16
+* R11 R15 R16
 The Bookstopia app utilizes several third party services, namely Stripe, Amazon Web Services, Heroku and Bulma. The creation of routes, methods, views and models are simply not sufficient to launch a scalable application, third party applications assists us in developing a more functional and scalable project. AWS serves as a data storage/ database since the Bookstopia allows for the upload of book images. Although a handful of images may not pose an issue for local databse, a scaled application will require a more robust database, as data uploads from multiple users may tally up beyond the local database capacity.
 
 Stripe is a third party application which allows a business to receive payments when a request is sent to pay for a product. The stripe application  has a boilerplate form which allows for ease of attaching required information, as to what was purchased and whom purchased it. Stripe automatically calculates any neccessary mathematical operations and deducts the designated amount of a particular product. Once the transaction is complete stripe then sends back a confirmation post to notify as to whether or not it was successful. Availing of this service carries a surcharge for every transaction conducted with stripe.
@@ -73,13 +73,13 @@ Heroku is a cloud platform, which allows scallable application to be launched on
 
 ##### 3.1. Identify the problem you’re trying to solve by building this particular marketplace App?
 * Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting
-R7 R8 R11
+* R7 R8 R11
 In the current Australian economy especially post the Corona virus unemployment rates would have increased. Thousands of people will be under financial stress. These people may have unused books lying around, which they can easily monetize by posting it in a market place. Although certain books may not fetch a decent amount, it is still extra income which families may use for common household utilities. Some books may also have significant value to other indiviuals e.g. a university student requiring a certain text book, which can be costly, Bookstopia aims to reduce these prices and make books more accessible for everyone.
 
 
 ##### 3.2 Why is the problem identified a problem that needs solving?--------------------------------------------------------------
 * Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting
-R7 R8 R11
+* R7 R8 R11
  Most online markets such as Ebay and gumtree contain broad range of products listings, which can be disrupt the attention of a potential book buyer. Listing priority is also monetized, which can push down other listings. Big markets also capitalize on individuals by charging fees and even comission based on a sale, leading to inflated prices which are then passed on to the end consumer.
  Bookstopia is aimed to create an online marketplace, where it focuses on selling both new and used books, but mainly focusing on the latter. By selling used books online Bookstopia can help in reducing waste, as unused books have the potential to be reused. Book prices may also be significantly lower as the middle man is eliminated, making books affordable. Some books may even be marked down at the discrecion of the seller due to slight cosmetic damage. The use of the application is also completely free, where all profits from a listing sale will go directly to the seller without charge of commision, allowing for extra income. The aim of keeping the application completely free is to encourage lower prices from private sellers. Bookstopia will be powered by minimal advertisements, to fund constant development.
 
